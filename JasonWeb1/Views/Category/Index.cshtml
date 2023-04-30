@@ -1,0 +1,29 @@
+﻿@model List<Category>
+
+<h1>Category List</h1>
+<!-- fetch / display category rows below (that we retrivied) -->
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>
+            Category Number
+        </th>
+        <th>
+            Category Name
+        </th>
+        <th>
+            Display Order
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model.OrderBy(c=>c.DisplayOrder))
+        {
+        <tr>
+            <td>@obj.CategoryId</td>
+            <td>@obj.Name</td>
+            <td>@obj.DisplayOrder</td>
+        </tr>
+        }
+    </tbody>
+</table>

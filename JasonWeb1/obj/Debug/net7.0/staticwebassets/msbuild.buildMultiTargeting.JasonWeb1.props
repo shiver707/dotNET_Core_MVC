@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\JasonWeb1.props" />
+</Project>
